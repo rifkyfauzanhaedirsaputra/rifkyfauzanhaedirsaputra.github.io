@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alert Window</title>
+    <script>window.alert("Welcome To Our Website :)")
+
+    </script>
+    <script>
+        function pesan() {
+            alert("Halaman Siap");
+        }
+        function myFunction() {
+            document.getElementById("demo").innerHTML = "Belajar JavaScript.";
+        }
+        var nama = prompt("Siapa namamu : ","Masukkan Nama Anda");
+        document.write("Hallo "+ nama + " Selamat belajar javascript");
+        function pesan() 
+        {
+            alert("Memanggil javascript melalui event onload button");
+        }
+        function confirmation()
+        {
+            var yakin = confirm ("Apakah Anda Yakin?");
+            if (yakin) {
+                document.write("Ya,Saya Yakin");
+            } else {
+                document.write("Saya Tidak Yakin:)");
+            }
+        }
+        function kali(nilai, nilai2)
+        {
+            document.write("Perkalian" + nilai + " * ");
+            document.write(nilai*nilai2 + "<br>");
+        }
+        function bagi(nilai1, nilai2)
+        {
+            document.write("Pembagian " + nilai1 + " / " + nilai2 + " = ");
+            document.write(nilai1/nilai2 + "<br>");
+        }
+        function jumlah(nilai1,nilai2)
+        {
+            document.write("Penjumlahan " + nilai1 + " + " + nilai2 + " = ");
+            document.write(nilai1+nilai2 + "<br>"); 
+        }
+        function kurang(nilai1,nilai2)
+        {
+            document.write("Pengurangan " + nilai1 + " - " + nilai2 + " = ");
+            document.write(nilai1-nilai2 + "<br>");
+        }
+        var nilai = prompt("Masukkan Nilai (0 .. 100):", 0);
+        var hasil = "";
+        if (nilai >= 70)
+        {
+            hasil = "Lulus";
+        } else
+        {
+            hasil = "Mengulang";
+        }
+        document.write("Hasil dari nilai anda : " + hasil);
+        switch(pilihan) {
+        case "3" :
+                document.write("Ini pilihan no tiga");
+                break;
+            default :
+                document.write("Pilihan tidak tersedia");
+            }
+            function ganjil_genap()
+            {
+                var nilai = document.proses.bil1.value;
+                if(nilai%2 == 0)
+            {
+                document.getElementById("Hasil").innerHTML = "Bilangan Genap";
+            } else 
+                {
+                    document.getElementById("Hasil").innerHTML = "Bilangan Ganjil";
+                }
+            }
+    </script>
+</head>
+<body onload="pesan()">
+    <h1 id="demo">demo</h1>
+    <button type="button" onclick="myFunction()">Klik</button>
+    <button onclick="confirmation()">Konfirmasi</button>
+    <input type="button" name="button1" value="Perkalian"
+        onclick="kali(9,4)">
+    <input type="button" name="button1" value="Pembagian"
+        onclick="bagi(9,4)">
+    <input type="button" name="button1" value="Penjumlahan"
+        onclick="jumlah(9,4)">
+    <input type="button" name="button1" value="Pengurangan"
+        onclick="kurang(9,4)">
+        <script>
+            var x = 0;
+            while(x <= 10)
+        {
+            document.write( x + "<br>");
+            x++;
+        }
+            for(x=0; x<=10; x++)
+        {
+            document.write( x + "<br>");
+        }
+        </script>
+    <form method="post" name="proses">
+        Bilangan 1 : <input type="text" name="bil1">
+        <input type="button" name="button1" value="cek" onclick="ganjil_genap()">
+
+        <p id="hasil"></p>
+    </form>
+</body>
+</html>
